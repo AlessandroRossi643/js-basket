@@ -56,4 +56,17 @@ $('#player_list').change(function(){
   // Salvo l'indice in una variabile che mi servirà per individuare il giocatore scelto
   var giocatore_selezionato=($(this).val());
   console.log(lista_giocatori[giocatore_selezionato]);
+
+  var codice_selezionato=lista_giocatori[giocatore_selezionato].codiceGiocatore;
+  $('.player_code').text(codice_selezionato);
+
+  var punti_gselezionato=lista_giocatori[giocatore_selezionato].puntiFatti;
+  $('.player_Points').text(punti_gselezionato);
+
+  var rimbalzi_gselezionato=lista_giocatori[giocatore_selezionato].rimbalzi;
+  $('.player_Rebounds').text(rimbalzi_gselezionato);
+
+  $('.Player_Fauls span').text(lista_giocatori[giocatore_selezionato].falli);
+  $('.Player_2Points span').text(lista_giocatori[giocatore_selezionato].succ2points);
+  $('.Player_3Points span').text(lista_giocatori[giocatore_selezionato].succ3points);
 });
