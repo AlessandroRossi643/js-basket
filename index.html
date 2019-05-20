@@ -9,17 +9,34 @@
     <select id="player_list" name="">
     </select>
 
-    <div class="player_dates">
-      <h1 class="player_code"></h1>
-
-      <h2>Punti Fatti: <span class="player_Points"></span></h2>
-      <h2>Rimbalzi: <span class="player_Rebounds"></span></h2>
-      <h2 class="Player_Fauls">Falli: <span></span></h2>
-      <h2 class="Player_2Points">Percentuale da 2 punti(%): <span></span></h2>
-      <h2 class="Player_3Points">Percentuale da 3 punti(%): <span></span></h2>
-
+    <div class="player_Card">
     </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="script.js" charset="utf-8"></script>
+
+    <script id="player-template" type="text/x-handlebars-template">
+      <div class="player_code">
+        <h1> {{title}} </h1>
+        <h2> Punti fatti:
+          <span> {{puntifatti}} </span>
+        </h2>
+        <h2> Rimbalzi:
+          <span> {{rimbalzi}} </span>
+        </h2>
+        <h2> Falli:
+          <span> {{falli}} </span>
+        </h2>
+        <h2> Percentuale da 2 punti(%):
+          <span> {{perc2points}} </span>
+        </h2>
+        <h2> Percentuale da 3 punti(%):
+          <span> {{perc3points}} </span>
+        </h2>
+      </div>
+    </script>
+
   </body>
 </html>
