@@ -25,6 +25,7 @@ $(document).ready(function(){
   }
 
   //Creazione oggetto giocatore e riempimento dell'array lista_giocatori
+  var i; //numero giocatori
   for (var i = 0; i < 100; i++) {
 
     // Controllo con il do while: Inserisci il giocatore finche la condizione (codice giocatore non sia incluso nella lista giocatori ) è vera
